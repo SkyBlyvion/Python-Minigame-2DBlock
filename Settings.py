@@ -10,7 +10,7 @@ POWERUP_COLOR = (0, 255, 0)
 
 # Player settings
 PLAYER_SIZE = 50
-PLAYER_SPEED = 7
+PLAYER_SPEED = 9
 
 # Enemy settings
 ENEMY_SIZE = 50
@@ -22,3 +22,12 @@ POWERUP_SIZE = 30
 
 # Attraction settings
 ATTRACT_RADIUS = 150  # Radius around the player within which enemies are attracted
+
+# Funny phrases
+FUNNY_PHRASES = [
+    "Power-Up! Feeling Lucky!",
+    "Booyah! Extra Points!",
+    "Zap! You've been fed up!",
+    "Wham! Score Boost!",
+    "Kaboom! Mega Points!"
+]

@@ -10,13 +10,13 @@ class Player:
 
     def handle_keys(self):
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT]:
+        if keys[pygame.K_q]:
             self.rect.x -= PLAYER_SPEED
-        if keys[pygame.K_RIGHT]:
+        if keys[pygame.K_d]:
             self.rect.x += PLAYER_SPEED
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_z]:
             self.rect.y -= PLAYER_SPEED
-        if keys[pygame.K_DOWN]:
+        if keys[pygame.K_s]:
             self.rect.y += PLAYER_SPEED
 
     def draw(self, screen):

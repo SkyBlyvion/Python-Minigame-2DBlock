@@ -2,7 +2,8 @@
 
 import pygame
 import random
-from settings import ENEMY_SIZE, WIDTH, HEIGHT, MIN_ENEMY_SPEED, MAX_ENEMY_SPEED
+import math
+from settings import ENEMY_SIZE, WIDTH, HEIGHT, MIN_ENEMY_SPEED, MAX_ENEMY_SPEED, ATTRACT_RADIUS
 
 # Colors
 RED = (255, 0, 0)
@@ -52,3 +53,12 @@ class Enemy:
             (center[0] - 3, center[1] - 3)
         ])
 
+    def attract_to_player(self, player_rect):
+        distance_x = player_rect.centerx - self.rect.centerx
+        distance_y = player_rect.centery - self.rect.centery
+        distance = math.hypot(distance_x, distance_y)
+
+        if distance < ATTRACT_RADIUS and self.rect.y < player_rect.y:
+            attraction_strength = 0.05  # Adjust this value to change the strength of attraction
+            self.rect.x += attraction_strength * distance_x
+            self.rect.y += attraction_strength * distance_y

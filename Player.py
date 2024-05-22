@@ -1,7 +1,7 @@
 # player.py
 
 import pygame
-from Settings import PLAYER_COLOR, PLAYER_SIZE, PLAYER_SPEED
+from settings import PLAYER_COLOR, PLAYER_SIZE, PLAYER_SPEED
 
 class Player:
     def __init__(self, x, y):

@@ -2,10 +2,9 @@
 
 import pygame
 import sys
-import random
-from Settings import WIDTH, HEIGHT, BLACK
-from Player import Player
-from Enemy import Enemy
+from settings import WIDTH, HEIGHT, BLACK
+from player import Player
+from enemy import Enemy
 
 def main():
     pygame.init()
